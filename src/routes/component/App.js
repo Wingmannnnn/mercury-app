@@ -96,7 +96,7 @@ function App(props) {
   useEffect(() => {
     if (blinkCount >= 3 && !blinkAlertShown) {
       playSound();
-      Alert.alert("警告", "您眨眼的次數過多，請保持警覺");
+      //Alert.alert("警告", "您眨眼的次數過多，請保持警覺");
       violationadd("眨眼頻率過高");
       setBlinkCount(0);
       setBlinkAlertShown(true);
@@ -104,7 +104,7 @@ function App(props) {
 
     if (yawnCount >= 3 && !yawnAlertShown) {
       violationadd("打哈欠");
-      Alert.alert("警告", "您打哈欠的次數過多，請保持警覺");
+      //Alert.alert("警告", "您打哈欠的次數過多，請保持警覺");
       setYawnCount(0);
       setYawnAlertShown(true);
     }
@@ -171,12 +171,12 @@ function App(props) {
   function getFaceDataView() {
     if (faceData.length === 0) {
       return (
-        
+
         <View style={styles.faces}>
           <Text style={styles.faceDesc}>No face!</Text>
         </View>
       );
-      
+
     } else {
       return (
         <View style={styles.faces}>
@@ -265,7 +265,7 @@ function App(props) {
     });
     }
 
-    
+
 
 
 
